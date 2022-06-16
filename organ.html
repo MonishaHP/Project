@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <title>Organ Donors Registration Form</title>
+    <link rel="stylesheet" href="blood.css">
+    <style>
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2sHcbzFzi2qm9s7I3Y37fW618SerLBghTA&usqp=CAU);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="myform" method="post" onsubmit="return validate();">
+        <h3>ORGAN DONORS REGISTRATION FORM</h3>
+        <table align="center" cellpadding="10">
+            <tr>
+                <td>FIRST NAME</td>
+                <td><input type="text" name="First_Name" maxlength="30">
+                    (max 30 characters a-z and A-Z)
+                </td>
+            </tr>
+            <tr>
+                <td>LAST NAME</td>
+                <td><input type="text" name="Last_Name" maxlength="30">
+                    (max 30 characters A-Z and a-z)
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" name="date" id="date" min="1981-01-01" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>EMAIL ID</td>
+                <td><input type="text" name="Email_Id" max="20">
+                    (Enter valid Email_Id)
+                </td>
+            </tr>
+            <tr>
+                <td>MOBILE NUMBER</td>
+                <td><input type="tel" name="Mobile_Number" maxlength="10" placeholder="Enter 10 digit number" required>
+                </td>
+            </tr>
+            <tr>
+                <td>GENDER</td>
+                <td>MALE<input type="radio" name="Gender" id="Male">
+                    FEMALE<input type="radio" name="Gender" id="Female"></td>
+            </tr>
+            <tr>
+                <td>ADDRESS <br><br><br></td>
+                <td><textarea name="Address" cols="30" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td>CITY</td>
+                <td><input type="text" name="City" maxlength="30" required>
+                    (max 30 characters a-z and A-Z)
+                </td>
+            </tr>
+            <tr>
+                <td>PINCODE</td>
+                <td><input type="tel" name="Pincode" maxlength="6" required>
+                    (6 digit number)
+                </td>
+            </tr>
+            <tr>
+                <td>STATE</td>
+                <td><input type="text" name="State" maxlength="30" required>
+                    (max 30 characters a-z and A-Z)
+                </td>
+            </tr>
+            <tr>
+                <td>COUNTRY</td>
+                <td><input type="text" name="Country" value="India" readonly="readonly" required></td>
+            </tr>
+            <tr>
+                <td>BLOOD GROUP <br><br><br></td>
+                <td>
+                    A+
+                    <input type="radio" name="BLOOD GROUP" value="A+">
+                    A-
+                    <input type="radio" name="BLOOD GROUP" value="A-">
+                    B+
+                    <input type="radio" name="BLOOD GROUP" value="B+">
+                    B-
+                    <input type="radio" name="BLOOD GROUP" value="B-">
+                    O+
+                    <input type="radio" name="BLOOD GROUP" value="O+">
+                    O-
+                    <input type="radio" name="BLOOD GROUP" value="O-">
+                    AB+
+                    <input type="radio" name="BLOOD GROUP" value="AB+">
+                    BOMBAY BLOOD
+                    <input type="radio" name="Hobby_Bombay Blood" value="Bambay Blood"> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>ORGAN TYPE <br><br><br></td>
+                <td>
+                    Eyes
+                    <input type="checkbox" name="ORGAN TYPE" value="Eyes">
+                    Heart
+                    <input type="checkbox" name="ORGAN TYPE" value="Heart">
+                    Lung
+                    <input type="checkbox" name="ORGAN TYPE" value="Lung">
+                    Pancreas
+                    <input type="checkbox" name="ORGAN TYPE" value="Pancreas">
+                    Kidney
+                    <input type="checkbox" name="ORGAN TYPE" value="Kidney">
+                    Small intestine
+                    <input type="checkbox" name="ORGAN TYPE" value="Small intestine">
+                    Cornea
+                    <input type="checkbox" name="ORGAN TYPE" value="Cornea">
+                    Bone marrow
+                    <input type="checkbox" name="ORGAN TYPE" value="Bone marrow">
+                    <br>
+                </td>
+
+            </tr>
+            <tr>
+                <td>REFERENCE</td>
+                <td>
+                    ADHAAR NUMBER
+                    <input type="tel" name="Masters_adhar" maxlength="12" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" class="btn" value="Submit">
+                    <input type="reset" class="btn" value="Reset">
+                    <button type="button" class="btn btn-primary"><a href="homepage.html">Back to Home</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function validate() {
+        var first = document.forms["myform"]["First_Name"].value;
+        var last = document.forms["myform"]["Last_Name"].value;
+        var email = document.forms["myform"]["Email_Id"].value;
+        if (first == "") {
+            alert("Enter the first name");
+            return false;
+        }
+        if (!isNaN(first)) {
+            alert("Name in characters");
+            return false;
+        }
+
+        if (last == "") {
+            alert("Enter the last name");
+            return false;
+        }
+        if (!isNaN(last)) {
+            alert("Name in characters");
+            return false;
+        }
+
+        if (email == "") {
+            alert("Enter the email");
+            return false;
+        }
+
+        var at = email.indexOf("@");
+        var dot = email.lastIndexOf(".");
+        if (at < 1 || dot < at + 2 || dot + 2 >= emai.length) {
+            alert("Ivalid Email_Id ");
+            return false;
+        }
+    }
+</script>
+
+</html>

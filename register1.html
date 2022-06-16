@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url(https://img.freepik.com/free-photo/cardiology-organ-donation-healthy-heart-concept_609048-2920.jpg?w=1060);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .fit {
+            color: rgb(41, 92, 92);
+        }
+
+        .form {
+            color: black;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-decoration: solid;
+            color: rgb(152, 10, 10);
+
+        }
+
+        label {
+            width: 8%;
+            display: inline-block;
+        }
+
+        button {
+            width: 12%;
+            height: 40px;
+            margin: 20px;
+            border-radius: 60px;
+            background-color: rgb(234, 81, 81);
+            font-size: 17px;
+            text-align: center;
+            position: absolute;
+            left: 30px;
+            padding: 9px;
+
+        }
+
+        a:link {
+            padding-left: 90px;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+
+        }
+
+        a:hover {
+            color: aqua;
+        }
+
+        input {
+            border-radius: 60px;
+            text-align: center;
+            width: 17%;
+            padding: 12px;
+            background-color: rgb(175, 179, 182);
+        }
+
+        h2 {
+            padding-left: 30px;
+        }
+
+        ::placeholder {
+            font-size: larger;
+            font-style: normal;
+            color: rgb(179, 112, 148);
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mn{
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fit">
+        <!-- <p>Welcome</p> -->
+        <br><br><br>
+        <h1>ORGAN DONATION</h1>
+        <div class="form"><br>
+            <h2>Registeration Form</h2><br>
+            <form name="f1" action="" onsubmit="validate();" onsubmit="vaild();">
+                <input type="text" name="username" pattern="[a-z,A-Z,0-9]{8,16}"
+                    title="username should consist of combination of upper & lower case letters : (min & max range :8-16)"
+                    placeholder="Username" required> <br> <br>
+                <input type="password" name="Password" pattern="[a-z,A-Z,0-9]{8,16}"
+                    title="Password should consist of combination of upper & lower case letters and numerical (min & max range :8-16)"
+                    placeholder="Password" required><br><br>
+                <button>
+                    <b>
+                        <font background-color:red>
+                            <center>Submit</center><a href="login1.html"></font>
+                    </b></a>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+<script language="javascript">
+    function validate() {
+        var user = document.f1.username.value;
+        alert("welcome");
+        alert(user);
+        alert("You are Successfully Registered to the Organ Donation!");
+    }
+</script>
+<br><br><br><br>
+<a href="login1.html" class="mn">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzUsd5lXL7hsB9h8zeFrKdeGpZviLXJvoTHA&usqp=CAU" width="50" height="15"><b>Login</b>
+</a>
+</html>

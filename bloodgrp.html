@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <title>Blood Donor Registration Form</title>
+    <link rel="stylesheet" href="blood.css">
+    <style>
+        body {
+            background-image: url(https://st3.depositphotos.com/1003924/35965/i/600/depositphotos_359656668-stock-photo-doctor-holding-showing-red-heart.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="myform" method="get" onsubmit="return validate();" action="">
+        <h3>BLOOD DONOR REGISTRATION FORM</h3>
+        <table align="center" cellpadding="10">
+            <tr>
+                <td>FIRST NAME</td>
+                <td><input type="text" name="First_Name" maxlength="30">
+                </td>
+            </tr>
+            <tr>
+                <td>LAST NAME</td>
+                <td><input type="text" name="Last_Name" maxlength="30">
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date"name="date"id="date"min="1981-01-01"/>
+                </td>
+            </tr>  
+            <tr>
+                <td>EMAIL ID</td>
+                <td><input type="text" name="Email_Id" max="99">
+                </td>
+            </tr>
+            <tr>
+                <td>MOBILE NUMBER</td>
+                <td><input type="tel" name="Mobile_Number" maxlength="10" pattern="[0-9]{10}"
+                        placeholder="Enter 10 digits number" required>
+                </td>
+            </tr>
+            <tr>
+                <td>GENDER</td>
+                <td> MALE<input type="radio" name="Gender" id="Male">
+                    FEMALE<input type="radio" name="Gender" id="Female"></td>
+            </tr>
+            <tr>
+                <td>ADDRESS <br><br><br></td>
+                <td><textarea name="Address" cols="30" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td>CITY</td>
+                <td><input type="text" name="City" maxlength="30" required>
+                </td>
+            </tr>
+            <tr>
+                <td>PINCODE</td>
+                <td><input type="tel" name="Pincode" maxlength="6" placeholder="Enter 6 digit code" required>
+                </td>
+            </tr>
+            <tr>
+                <td>STATE</td>
+                <td><input type="tel" name="State" maxlength="30" required>
+                </td>
+            </tr>
+            <tr>
+                <td>COUNTRY</td>
+                <td><input type="text" name="Country" value="India" readonly="readonly" required></td>
+            </tr>
+            <tr>
+                <td>BLOOD GROUP <br><br><br></td>
+                <td>
+                    A+
+                    <input type="radio" name="BLOOD GROUP" id="A+">
+                    A-
+                    <input type="radio" name="BLOOD GROUP" id="A-">
+                    B+
+                    <input type="radio" name="BLOOD GROUP" id="B+">
+                    B-
+                    <input type="radio" name="BLOOD GROUP" id="B-">
+                    O+
+                    <input type="radio" name="BLOOD GROUP" id="O+">
+                    O-
+                    <input type="radio" name="BLOOD GROUP" id="O-">
+                    AB+
+                    <input type="radio" name="BLOOD GROUP" id="AB+">
+                    BOMBAY BLOOD
+                </td>
+            </tr>
+            <tr>
+                <td>REFERENCE</td>
+                <td>
+                    ADHAAR NUMBER
+                    <input type="tel" name="Masters_adhar" maxlength="12" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" class="btn" value="Submit">
+                    <input type="reset" class="btn" value="Reset">
+                    <button type="button" class="btn"><a href="homepage.html">Back To Home</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function validate() {
+        var first = document.forms["myform"]["First_Name"].value;
+        var last = document.forms["myform"]["Last_Name"].value;
+        var date=document.forms["myform"]["date"].value;
+        var email = document.forms["myform"]["Email_Id"].value;
+
+        if (first == "") {
+            alert("Enter the first name");
+            return false;
+        }
+        if (!isNaN(first)) {
+            alert("Name in characters");
+            return false;
+        }
+
+        if (last == "") {
+            alert("Enter the last name");
+            return false;
+        }
+        if (!isNaN(last)) {
+            alert("Name in characters");
+            return false;
+        }
+
+        if(date == "")
+                {
+                    alert("enter the date of birth");
+                    return false;
+                }
+
+        if (email == "") {
+            alert("Enter the email");
+            return false;
+        }
+
+        var at = email.indexOf("@");
+        var dot = email.lastIndexOf(".");
+        if (at < 1 || dot < at + 2 || dot + 2 >= emai.length) {
+            alert("Ivalid Email_Id ");
+            return false;
+        }
+    }
+
+   console.log("Successfull Registered to Blood Donation");
+
+</script>
+
+</html>
