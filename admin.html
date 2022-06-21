@@ -76,7 +76,7 @@
         ::placeholder {
             font-size: larger;
             font-style: normal;
-            color: rgb(179, 112, 148);
+            color:deeppink;
         }
 
         .main {
@@ -98,9 +98,9 @@
             right: auto;
             float: rig;
         }
-        .mn{
+        /* .mn{
             margin-left: 560px;
-        }
+        } */
     </style>
 </head>
 
@@ -108,28 +108,28 @@
     <div class="fit">
         <div class="form"><br>
             <h2>Admin Form</h2><br>
-            <form name="f1" action="" onsubmit="validate();">
+            <form name="f1" id="f1" action="homepage.html" onsubmit="validate();">
                 <!---  <label for="name" ><b>UserName </b></label> -->
                 <!-- <img src="./Images/user.png" width="30px" height="30px"> -->
-                <input type="text" name="username" pattern="Team1"
+                <input type="text" name="username" id="username" pattern="Team1"
                     placeholder="Username" required> <br> <br>
                 <!--  <label for="password"><b>Password</b></label> -->
                 <!-- <img src="./Images/pwd.png" width="30px" height="30px"> -->
-                <input type="password" name="Password" pattern="Team1@1"
+                <input type="password" name="Password" id="Password" pattern="Team1@1"
                     placeholder="Password" required><br><br>
-                <button>
+                <button id="btn">
                     <b>
                         <font background-color:red>
-                            <center>Submit</center><a href="homepage.html" </font>
+                            <center>Submit</center><a href="homepage.html"></a> </font>
                     </b></a>
                 </button>
             </form>
         </div>
     </div>
 </body>
-<a href="homepage.html" class="mn">
+<!-- <a href="homepage.html" class="mn">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzUsd5lXL7hsB9h8zeFrKdeGpZviLXJvoTHA&usqp=CAU" width="50" height="15"><b>HOME</b>
-</a>
+</a> -->
 <script language="javascript">
     function validate() {
         var user = document.f1.username.value;
