@@ -1,126 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-image: url(https://img.freepik.com/free-photo/cardiology-organ-donation-healthy-heart-concept_609048-2920.jpg?w=1060);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .fit {
-            color: rgb(41, 92, 92);
-        }
-
-        .form {
-            color: black;
-        }
-
-        h1 {
-            font-size: 50px;
-            text-decoration: solid;
-            color: rgb(152, 10, 10);
-
-        }
-
-        label {
-            width: 8%;
-            display: inline-block;
-        }
-
-        button {
-            width: 12%;
-            height: 40px;
-            margin: 20px;
-            border-radius: 60px;
-            background-color: rgb(234, 81, 81);
-            font-size: 17px;
-            text-align: center;
-            position: absolute;
-            left: 30px;
-            padding: 9px;
-
-        }
-
-        a:link {
-            padding-left: 90px;
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-
-        }
-
-        a:hover {
-            color: aqua;
-        }
-
-        input {
-            border-radius: 60px;
-            text-align: center;
-            width: 17%;
-            padding: 12px;
-            background-color: rgb(175, 179, 182);
-        }
-
-        h2 {
-            padding-left: 30px;
-        }
-
-        ::placeholder {
-            font-size: larger;
-            font-style: normal;
-            color: rgb(179, 112, 148);
-        }
-
-        .main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .mn{
-            padding: 12px;
-        }
-    </style>
+    <title>Regestration form</title>
+    <link rel="stylesheet" href="register.css">
 </head>
 
 <body>
-    <div class="fit">
-        <!-- <p>Welcome</p> -->
-        <br><br><br>
-        <h1>ORGAN DONATION</h1>
-        <div class="form"><br>
-            <h2>Registeration Form</h2><br>
-            <form name="f1" action="" onsubmit="validate();" onsubmit="vaild();">
-                <input type="text" name="username" pattern="[a-z,A-Z,0-9]{8,16}"
-                    title="username should consist of combination of upper & lower case letters : (min & max range :8-16)"
-                    placeholder="Username" required> <br> <br>
-                <input type="password" name="Password" pattern="[a-z,A-Z,0-9]{8,16}"
+    <div class="container">
+        <div class="title">Registration</div>
+        <form name="myfrom" method="post" action="login1.html">
+            <div class="user_details">
+                <div class="input_box">
+                    <span class="details">Full Name</span>
+                    <input type="text" id="text" placeholder="Enter your name" required>
+
+                </div>
+                <div class="input_box">
+                    <span class="details">Username</span>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">Email </span>
+                    <input type="email" name="Email_Id" id="Email_Id" placeholder="Enter your email" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">Phone Number</span>
+                    <input type="tel" id="number" placeholder="10 numbers" maxlength="10" pattern="[0-9]{10}" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">Password</span>
+                    <input type="password" name="Password" id="Password" pattern="[a-z,A-Z,0-9]{8,16}"
                     title="Password should consist of combination of upper & lower case letters and numerical (min & max range :8-16)"
-                    placeholder="Password" required><br><br>
-                <button>
-                    <b>
-                        <font background-color:red>
-                            <center>Submit</center><a href="login1.html"></font>
-                    </b></a>
-                </button>
-            </form>
-        </div>
+                    placeholder="Enter password" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">Confirm password</span>
+                    <input type="password" name="ConfirmPassword" id="ConfirmPassword" pattern="[a-z,A-Z,0-9]{8,16}"
+                    title="Password should consist of combination of upper & lower case letters and numerical (min & max range :8-16)"
+                    placeholder="Enter password" required>
+                        <span id="message"></span>
+                </div>
+            </div>
+            <div class="gender_details">
+
+                <b>
+                    <p>Gender:</p>
+                    <input type="radio" name="Gender" id="male">Male
+                    <input type="radio" name="Gender" id="female">Female
+                    <input type="radio" name="Gender" id="Gender">Prefer not to say
+                </b>
+            </div>
+            <div class="button" id="btn">
+                <a href="./login1.html"><input type="button" id="submit" onclick="validate()" value="Register"/></a>
+            </div>
+        </form>
     </div>
 </body>
-<script language="javascript">
+<script>
     function validate() {
-        var user = document.f1.username.value;
-        alert("welcome");
-        alert(user);
-        alert("You are Successfully Registered to the Organ Donation!");
+        // var email = document.forms["myform"]["Email_Id"].value;
+
+        // if (email == "") {
+        //     alert("Enter the email");
+        //     return false;
+        // }
+
+        // var at = email.indexOf("@");
+        // var dot = email.lastIndexOf(".");
+        // if (at < 1 || dot < at + 2 || dot + 2 >= email.length) {
+        //     alert("Ivalid Email_Id ");
+        //     return false;
+        // }
+
+        let password = document.getElementById("Password").value;
+        let cnfrmPassword = document.getElementById("ConfirmPassword").value;
+        console.log(password,cnfrmPassword);
+        let message = document.getElementById("message");
+
+        if (password.length != 0){
+            if (password == cnfrmPassword){
+                message.textContent = "Password match";
+            }else{
+                message.textContent = "Password don't match";
+            }
+        }
     }
+    
 </script>
-<br><br><br><br>
-<a href="login1.html" class="mn">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzUsd5lXL7hsB9h8zeFrKdeGpZviLXJvoTHA&usqp=CAU" width="50" height="15"><b>Login</b>
-</a>
+
 </html>
