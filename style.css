@@ -35,15 +35,19 @@ a{
 }
 .btn{
     border: lid #fff;
-    padding: 6px 25px;
-    border-radius: 30px;
-    margin-left: 30px;
+    padding: 6px 15px;
+    border-radius: 20px;
+    /* margin-left: 30px; */
+}
+.btn:hover{
+    background-color: darkgoldenrod;
 }
 .row{
     display: flex;
     flex-wrap: wrap;
     margin-top: 1%;
     justify-content: space-between;
+    text-align: center;
 }
 .col-1{
     flex-basis: 40%;
@@ -58,4 +62,9 @@ a{
 }
 .col-1 img{
     width: 100%;
+}
+#btn{
+    text-align: center;
+    border-radius: 30px;
+    padding: 10px;
 }
