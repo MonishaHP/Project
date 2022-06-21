@@ -1,29 +1,29 @@
 <html>
 
 <head>
-    <title>Organ Donors Registration Form</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="blood.css">
     <style>
         body {
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2sHcbzFzi2qm9s7I3Y37fW618SerLBghTA&usqp=CAU);
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnDV-jvQwlg6q_jPv0c6twr4rdGOeulEhtMg&usqp=CAU);
             background-size: cover;
         }
     </style>
 </head>
 
 <body>
-    <form name="myform" method="post" onsubmit="return validate();">
-        <h3>ORGAN DONORS REGISTRATION FORM</h3>
+    <form name="myform" method="post" action="msg.html" onsubmit="return validate();">
+        <h3>REGISTRATION FORM</h3>
         <table align="center" cellpadding="10">
             <tr>
                 <td>FIRST NAME</td>
-                <td><input type="text" name="First_Name" maxlength="30">
+                <td><input type="text" name="First_Name" id="First_Name" maxlength="30">
                     (max 30 characters a-z and A-Z)
                 </td>
             </tr>
             <tr>
                 <td>LAST NAME</td>
-                <td><input type="text" name="Last_Name" maxlength="30">
+                <td><input type="text" name="Last_Name" id="Last_Name" maxlength="30">
                     (max 30 characters A-Z and a-z)
                 </td>
             </tr>
@@ -34,13 +34,13 @@
             </tr>
             <tr>
                 <td>EMAIL ID</td>
-                <td><input type="text" name="Email_Id" max="20">
+                <td><input type="text" name="Email_Id" id="Email_Id" max="20">
                     (Enter valid Email_Id)
                 </td>
             </tr>
             <tr>
                 <td>MOBILE NUMBER</td>
-                <td><input type="tel" name="Mobile_Number" maxlength="10" placeholder="Enter 10 digit number" required>
+                <td><input type="tel" name="Mobile_Number" id="Mobile_Number" maxlength="10" placeholder="Enter 10 digit number" required>
                 </td>
             </tr>
             <tr>
@@ -50,70 +50,99 @@
             </tr>
             <tr>
                 <td>ADDRESS <br><br><br></td>
-                <td><textarea name="Address" cols="30" rows="4" required></textarea></td>
+                <td><textarea name="Address" id="Address" cols="30" rows="4" required></textarea></td>
             </tr>
             <tr>
                 <td>CITY</td>
-                <td><input type="text" name="City" maxlength="30" required>
+                <td><input type="text" name="City" id="City" maxlength="30" required>
                     (max 30 characters a-z and A-Z)
                 </td>
             </tr>
             <tr>
                 <td>PINCODE</td>
-                <td><input type="tel" name="Pincode" maxlength="6" required>
+                <td><input type="tel" name="Pincode" id="Pincode" maxlength="6" required>
                     (6 digit number)
                 </td>
             </tr>
             <tr>
                 <td>STATE</td>
-                <td><input type="text" name="State" maxlength="30" required>
-                    (max 30 characters a-z and A-Z)
+                <td>
+                <select name="text" id="text">
+                    <option value="">------Select one------</option>
+                    <option value="">Andhar Pradhesh</option>
+                    <option value="">Arunachal Pradesh</option>
+                    <option value="">Assam</option>
+                    <option value="">Bihar</option>
+                    <option value="">Chattisgarh</option>
+                    <option value="">Goa</option>
+                    <option value="">Gujarat</option>
+                    <option value="">Haryana</option>
+                    <option value="">Himachal Pradesh</option>
+                    <option value="">Jharkhand</option>
+                    <option value="">Karnataka</option>
+                    <option value="">Kerala</option>
+                    <option value="">Madhya Pradesh</option>
+                    <option value="">Manipur</option>
+                    <option value="">Meghalaya</option>
+                    <option value="">Mizoram</option>
+                    <option value="">Nagaland</option>
+                    <option value="">Odisha</option>
+                    <option value="">Punjab</option>
+                    <option value="">Rajasthan</option>
+                    <option value="">Sikkim</option>
+                    <option value="">Tamil Nandu</option>
+                    <option value="">Telangana</option>
+                    <option value="">Tripura</option>
+                    <option value="">Uttar Pradesh</option>
+                    <option value="">UttarKhand</option>
+                    <option value="">West Bengal</option>
+                </select>
                 </td>
             </tr>
             <tr>
                 <td>COUNTRY</td>
-                <td><input type="text" name="Country" value="India" readonly="readonly" required></td>
+                <td><input type="text" name="Country" id="Country" value="India" readonly="readonly" required></td>
             </tr>
             <tr>
                 <td>BLOOD GROUP <br><br><br></td>
                 <td>
                     A+
-                    <input type="radio" name="BLOOD GROUP" value="A+">
+                    <input type="radio" name="BLOOD GROUP" id="A+" value="A+">
                     A-
-                    <input type="radio" name="BLOOD GROUP" value="A-">
+                    <input type="radio" name="BLOOD GROUP" id="A-" value="A-">
                     B+
-                    <input type="radio" name="BLOOD GROUP" value="B+">
+                    <input type="radio" name="BLOOD GROUP" id="B+" value="B+">
                     B-
-                    <input type="radio" name="BLOOD GROUP" value="B-">
+                    <input type="radio" name="BLOOD GROUP" id="B-" value="B-">
                     O+
-                    <input type="radio" name="BLOOD GROUP" value="O+">
+                    <input type="radio" name="BLOOD GROUP" id="O+" value="O+">
                     O-
-                    <input type="radio" name="BLOOD GROUP" value="O-">
+                    <input type="radio" name="BLOOD GROUP" id="O-" value="O-">
                     AB+
-                    <input type="radio" name="BLOOD GROUP" value="AB+">
+                    <input type="radio" name="BLOOD GROUP" id="AB+" value="AB+">
                     BOMBAY BLOOD
-                    <input type="radio" name="Hobby_Bombay Blood" value="Bambay Blood"> <br>
+                    <input type="radio" name="Hobby_Bombay Blood" id="Bombay Blood" value="Bombay Blood"> <br>
                 </td>
             </tr>
             <tr>
                 <td>ORGAN TYPE <br><br><br></td>
                 <td>
                     Eyes
-                    <input type="checkbox" name="ORGAN TYPE" value="Eyes">
+                    <input type="checkbox" name="ORGAN TYPE" id="Eyes" value="Eyes">
                     Heart
-                    <input type="checkbox" name="ORGAN TYPE" value="Heart">
+                    <input type="checkbox" name="ORGAN TYPE" id="Heart" value="Heart">
                     Lung
-                    <input type="checkbox" name="ORGAN TYPE" value="Lung">
+                    <input type="checkbox" name="ORGAN TYPE" id="Lung" value="Lung">
                     Pancreas
-                    <input type="checkbox" name="ORGAN TYPE" value="Pancreas">
+                    <input type="checkbox" name="ORGAN TYPE" id="Pancreas" value="Pancreas">
                     Kidney
-                    <input type="checkbox" name="ORGAN TYPE" value="Kidney">
+                    <input type="checkbox" name="ORGAN TYPE" id="Kidney" value="Kidney">
                     Small intestine
-                    <input type="checkbox" name="ORGAN TYPE" value="Small intestine">
+                    <input type="checkbox" name="ORGAN TYPE" id="Small intestine" value="Small intestine">
                     Cornea
-                    <input type="checkbox" name="ORGAN TYPE" value="Cornea">
+                    <input type="checkbox" name="ORGAN TYPE" id="cornea" value="Cornea">
                     Bone marrow
-                    <input type="checkbox" name="ORGAN TYPE" value="Bone marrow">
+                    <input type="checkbox" name="ORGAN TYPE" id="Bone marrow" value="Bone marrow">
                     <br>
                 </td>
 
@@ -122,14 +151,14 @@
                 <td>REFERENCE</td>
                 <td>
                     ADHAAR NUMBER
-                    <input type="tel" name="Masters_adhar" maxlength="12" required>
+                    <input type="tel" name="Masters_adhar" id="adhaar" maxlength="12" required>
                 </td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="submit" class="btn" value="Submit">
-                    <input type="reset" class="btn" value="Reset">
-                    <button type="button" class="btn btn-primary"><a href="homepage.html">Back to Home</a>
+                    <input type="submit" class="btn" id="submit" value="Submit">
+                    <input type="reset" class="btn" id="reset" value="Reset">
+                    <button type="button" class="btn btn-primary" id="btn"><a href="homepage.html">Back to Home</a>
                 </td>
             </tr>
         </table>
@@ -169,6 +198,8 @@
             alert("Ivalid Email_Id ");
             return false;
         }
+        // var sub = document.forms["myforms"]["submit"].value;
+        // alert("You have Successfully Registered!");
     }
 </script>
 
