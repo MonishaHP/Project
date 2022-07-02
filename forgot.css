@@ -1,0 +1,49 @@
+body {
+    background-image: url(https://thumbs.dreamstime.com/b/money-saving-red-heart-donate-philanthropy-health-care-love-organ-donation-family-insurance-csr-concept-world-160532921.jpg);
+    background-repeat: no-repeat;
+    /* background-size:cover; */
+    background-size: 1300px 600px;
+}
+form {
+    color: black;
+    text-align: center;
+}
+.title{
+    text-decoration: solid;
+    color: rgb(22, 102, 22);
+    text-align: center;
+}
+input {
+    border-radius: 60px;
+    text-align: center;
+    width: 17%;
+    padding: 12px;
+    background-color: rgb(162, 213, 252);
+    margin-bottom: 3px;
+}
+::placeholder {
+    font-size: larger;
+    font-style: normal;
+    color:rgb(235, 135, 5);
+}
+form .input_box{
+    /* margin: 12px 0 12px 0; */
+    align-items: center;
+    display:block;
+    font-size:larger;
+    font-weight: 700;
+}
+.details{
+    font-size: larger;
+}
+.button input{
+    border-radius: 60px;
+    font-size: 17px;
+    text-align: center;
+    position: static;
+    background-color: hotpink;
+}
+.button input:hover{
+    background-color: lemonchiffon;
+    color:rgb(15, 19, 223);
+}
