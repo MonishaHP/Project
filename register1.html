@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="title">Registration</div>
-        <form name="myfrom" method="post" action="login1.html">
+        <form name="myfrom" method="post" onsubmit="validate();" action="login1.html">
             <div class="user_details">
                 <div class="input_box">
                     <span class="details">Full Name</span>
@@ -30,15 +30,15 @@
                 <div class="input_box">
                     <span class="details">Password</span>
                     <input type="password" name="Password" id="Password" pattern="[a-z,A-Z,0-9]{8,16}"
-                    title="Password should consist of combination of upper & lower case letters and numerical (min & max range :8-16)"
-                    placeholder="Enter password" required>
+                        title="Password should consist of combination of upper & lower case letters and numerical (min & max range :8-16)"
+                        placeholder="Enter password" required>
                 </div>
                 <div class="input_box">
                     <span class="details">Confirm password</span>
                     <input type="password" name="ConfirmPassword" id="ConfirmPassword" pattern="[a-z,A-Z,0-9]{8,16}"
-                    title="Password should consist of combination of upper & lower case letters and numerical (min & max range :8-16)"
-                    placeholder="Enter password" required>
-                        <span id="message"></span>
+                        title="Password should consist of combination of upper & lower case letters and numerical (min & max range :8-16)"
+                        placeholder="Enter password" required>
+                    <span id="message"></span>
                 </div>
             </div>
             <div class="gender_details">
@@ -51,7 +51,7 @@
                 </b>
             </div>
             <div class="button" id="btn">
-                <a href="./login1.html"><input type="button" id="submit" onclick="validate()" value="Register"/></a>
+                <input type="submit" id="submit" value="Register" />
             </div>
         </form>
     </div>
@@ -72,20 +72,23 @@
         //     return false;
         // }
 
-        let password = document.getElementById("Password").value;
-        let cnfrmPassword = document.getElementById("ConfirmPassword").value;
-        console.log(password,cnfrmPassword);
-        let message = document.getElementById("message");
+        // let password = document.getElementById("Password").value;
+        // let cnfrmPassword = document.getElementById("ConfirmPassword").value;
+        // console.log(password, cnfrmPassword);
+        // let message = document.getElementById("message");
 
-        if (password.length != 0){
-            if (password == cnfrmPassword){
-                message.textContent = "Password match";
-            }else{
-                message.textContent = "Password don't match";
-            }
-        }
+        // if (password.length != 0) {
+        //     if (password == cnfrmPassword) {
+        //         message.textContent = "Password match";
+        //     } else {
+        //         message.textContent = "Password don't match";
+        //     }
+        // }
+        alert("You are Successfully registered to the Organ Donation!");
+
     }
-    
+
+
 </script>
 
 </html>
