@@ -6,7 +6,7 @@
 .hero{
     width: 100%;
     min-height: 60vh;
-    background-image: linear-gradient(white,rgb(137, 237, 87),white);
+    background-image: linear-gradient(white,rgb(98, 107, 93),whitesmoke);
     padding-left: 1%;
     box-sizing: border-box;
     color: white;
